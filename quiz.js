@@ -21,7 +21,7 @@ function hash(str) {
     return new Uint32Array([hash])[0].toString(36);
 }
 
-var questionSet = [["What is the capital of Wales?","10ow88p"],["What number are you thinking of between 0 and 100","19g"]];
+var questionSet = [["What is the capital of Wales?","10ow88p"],["What number are you thinking of between 0 and 100","19g"],["Name the best planet...","1d555p"]];
 
 function checkAnswer(answerNum){
     var response = "You were... ";
@@ -33,4 +33,23 @@ function checkAnswer(answerNum){
     }
     document.getElementById("feedback"+answerNum).innerText = response;
 
+}
+function populateQuiz(){
+  var questionNum = 0;
+  questionSet.forEach(element => {
+    var question = document.createElement("h2");
+    question.innerHTML = element[0];
+
+    var answer = document.createElement("<input type='text' name='answer"+questionNum+"' id='answer"+questionNum+"'");
+    
+    var button = document.createElement('<input type="button" value="Go for it!" onclick="checkAnswer('+questionNum+')">');
+    
+    var feedback = document.createElement("<p id='feedback"+questionNum+"></p>");
+
+    document.getElementById("quiz-area").appendChild(question);
+    document.getElementById("quiz-area").appendChild(answer);
+    document.getElementById("quiz-area").appendChild(button);
+
+    questionNum++;
+  });
 }
