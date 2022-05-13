@@ -40,7 +40,7 @@ function populateQuiz(){
     var question = document.createElement("h2");
     question.innerHTML = element[0];
 
-    var answer = document.createElement("<input type='text' name='answer"+questionNum+"' id='answer"+questionNum+"'");
+    var answer = document.createElement('<input type="text" name="answer'+questionNum+'" id="answer'+questionNum+'" >');
     
     var button = document.createElement('<input type="button" value="Go for it!" onclick="checkAnswer('+questionNum+')">');
     
