@@ -21,7 +21,7 @@ function hash(str) {
     return new Uint32Array([hash])[0].toString(36);
 }
 
-var questionSet = [["What is the best country?", "131st6"], ["What number am I thinking of between 0 and 100", "19g"], ["Which planet spins the other way ?", "1d555p"], ["What is the best flower?", "1nid"], ["What is the best song?","73achj"]];
+var questionSet = [["What is the best country?", "131st6"], ["What number am I thinking of between 0 and 100?", "19g"], ["Which planet spins the other way ?", "1d555p"], ["What is the best flower?", "1nid"], ["What is the best song?","73achj"]];
 
 function checkAnswer(answerNum){
     var response = "You were... ";
